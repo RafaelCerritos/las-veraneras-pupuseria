@@ -15,7 +15,7 @@ export function AboutSection() {
       </div>
 
       <p className="text-xs sm:text-sm leading-relaxed text-[#57391A]">
-        En <strong className="text-[#281101]">Las Veraneras Pupusería</strong> preparamos nuestras pupusas con el auténtico toque salvadoreño, utilizando masa de maíz nixtamalizado y harina de arroz fina, con ingredientes frescos seleccionados para brindarte la mejor experiencia de comida casera.
+        En <strong className="text-[#281101]">Las Veraneras Pupusería</strong> preparamos nuestras pupusas con el auténtico toque salvadoreño, utilizando masa de maíz y harina de arroz fina, con ingredientes frescos seleccionados para brindarte la mejor experiencia de comida casera.
       </p>
 
       {/* Key Value Pillars */}
