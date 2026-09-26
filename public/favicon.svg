@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Rounded brand badge background -->
+  <rect width="64" height="64" rx="16" fill="#FEF3E0"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" stroke="#EABA68" stroke-width="2"/>
+  
+  <!-- Steam whisps -->
+  <path d="M26 13c1-3-1-5 0-7" stroke="#B87519" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <path d="M32 12c1.2-3-1-6 0-8" stroke="#B87519" stroke-width="2.2" stroke-linecap="round" opacity="0.75"/>
+  <path d="M38 13c1-3-1-5 0-7" stroke="#B87519" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Comal / plate shadow -->
+  <ellipse cx="32" cy="41" rx="23" ry="11" fill="#57391A" opacity="0.15"/>
+  
+  <!-- Outer golden pupusa crust -->
+  <ellipse cx="32" cy="38" rx="21" ry="14" fill="#EABA68" stroke="#4A2C0D" stroke-width="2.2"/>
+  <!-- Inner grilled dough surface -->
+  <ellipse cx="32" cy="37" rx="16" ry="10" fill="#FCE9C8"/>
+  
+  <!-- Golden toasty comal spots -->
+  <circle cx="25" cy="35" r="2.2" fill="#B87519"/>
+  <circle cx="33" cy="39" r="2.5" fill="#57391A" opacity="0.8"/>
+  <circle cx="38" cy="34" r="1.8" fill="#B87519"/>
+  <circle cx="28" cy="40" r="1.5" fill="#C7435E" opacity="0.7"/>
+
+  <!-- Veranera (Bougainvillea) flower icon on top corner -->
+  <g transform="translate(39, 9)">
+    <!-- Small leaf -->
+    <path d="M0 11 C-4 7, -1 4, 3 6 C4 10, 2 13, 0 11Z" fill="#53601F"/>
+    <!-- Petals (bracts) -->
+    <path d="M6 3 C9 -2, 16 0, 14 7 C12 12, 5 10, 6 3Z" fill="#C7435E"/>
+    <path d="M13 6 C18 4, 21 11, 17 15 C13 18, 9 13, 13 6Z" fill="#E05370"/>
+    <path d="M6 10 C5 16, 12 19, 15 14 C17 10, 11 6, 6 10Z" fill="#A8324D"/>
+    <!-- Flower center pistil -->
+    <circle cx="11" cy="9" r="1.2" fill="#FFF4E2"/>
+  </g>
+</svg>

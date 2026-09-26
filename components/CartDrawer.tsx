@@ -461,6 +461,25 @@ export function CartDrawer() {
                     </span>
                   </div>
                 </div>
+
+                {/* Nota de horario y confirmación */}
+                <div className="bg-[#FFF4E2] border border-[#EABA68]/50 rounded-2xl p-3.5 text-xs text-[#57391A] space-y-1.5">
+                  <div className="flex items-center gap-1.5 font-bold text-[#281101]">
+                    <span className="text-base" role="img" aria-label="Horario">🗓️</span>
+                    <span>Atención: Solo Sábados</span>
+                  </div>
+                  <div className="space-y-1 pl-6 text-[11px] leading-relaxed text-[#4A2C0D]">
+                    <p>
+                      📝 <strong className="text-[#281101]">Recepción de pedidos:</strong> 6:00 AM – 7:00 PM
+                    </p>
+                    <p>
+                      🛵 <strong className="text-[#281101]">Repartos a domicilio:</strong> 5:00 PM – 8:00 PM (<span className="font-semibold text-[#281101]">El Sitio Cenícero</span>)
+                    </p>
+                    <p className="pt-1 text-[#53601F] font-medium border-t border-[#EABA68]/30">
+                      📲 Al enviar tu pedido, el restaurante te responderá confirmando la recepción y tiempo estimado.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {/* Confirmation Footer */}

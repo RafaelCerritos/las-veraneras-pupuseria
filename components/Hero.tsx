@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
-import { ChevronDown, Sparkles, MapPin } from 'lucide-react';
+import { ChevronDown, Sparkles, MapPin, Clock } from 'lucide-react';
 
 const HERO_LOGO_URL =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuC1R_gsfxsiBA32hpcdXJ76354SYyZsAVE6vg4-NLV8sXwUqhw7D7M9AL3vGFFTzVH5alvy-wcIZ5UqDi3aiU-j7qxLNXTdv1NtII_rvOF8ujDeHCx6BHnT6ZuDqQfoee7mDAoJ9mU0wlpZxrR4uO74MvvUTsxSAuK2xxVx0hkK1Iqkt1cmK4vPGTkuixbv5nPDfOyMwNGdRu1rtnK9s7nU1vJpdJp_m13NlV1uB9tFvmX2ghtL1X7ReGwDLpbfl9iGSA';
@@ -58,12 +58,21 @@ export function Hero() {
         Disfruta pupusas hechas con masa de maíz y arroz, preparadas con ingredientes tradicionales y mucho sabor salvadoreño.
       </p>
 
-      {/* Zona de pedidos a domicilio */}
-      <div className="mt-3.5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF4E2] border border-[#EABA68] shadow-xs text-xs text-[#4A2C0D] max-w-md mx-auto">
-        <span className="text-sm flex-shrink-0" role="img" aria-label="Reparto a domicilio">🛵</span>
-        <span className="leading-snug">
-          Pedidos a domicilio disponibles únicamente en la <strong className="text-[#281101] font-bold">comunidad El Sitio Cenícero</strong>
-        </span>
+      {/* Horario y Zona de pedidos a domicilio */}
+      <div className="mt-3.5 flex flex-col sm:flex-row items-center justify-center gap-2 max-w-2xl mx-auto">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF4E2] border border-[#EABA68] shadow-xs text-xs text-[#4A2C0D]">
+          <Clock className="w-3.5 h-3.5 text-[#53601F] flex-shrink-0" />
+          <span className="leading-snug">
+            <strong className="text-[#281101] font-bold">Solo Sábados:</strong> Pedidos 6:00 AM – 7:00 PM
+          </span>
+        </div>
+
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF4E2] border border-[#EABA68] shadow-xs text-xs text-[#4A2C0D]">
+          <span className="text-sm flex-shrink-0" role="img" aria-label="Reparto a domicilio">🛵</span>
+          <span className="leading-snug">
+            Repartos 5:00 PM – 8:00 PM (<strong className="text-[#281101] font-bold">El Sitio Cenícero</strong>)
+          </span>
+        </div>
       </div>
 
       {/* Action Buttons CTA */}

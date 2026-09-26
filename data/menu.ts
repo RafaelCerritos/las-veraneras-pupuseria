@@ -4,6 +4,13 @@ export const WHATSAPP_PHONE_NUMBER = '50363165227';
 export const WHATSAPP_DISPLAY_PHONE = '+503 6316 5227';
 export const WHATSAPP_PLACEHOLDER = WHATSAPP_PHONE_NUMBER;
 
+export const BUSINESS_HOURS = {
+  days: 'Solo sábados',
+  orderHours: '6:00 AM – 7:00 PM',
+  deliveryHours: '5:00 PM – 8:00 PM',
+  deliveryZone: 'Comunidad El Sitio Cenícero',
+};
+
 export const PUPUSA_CATALOG: PupusaItem[] = [
   {
     id: 'frijol-queso',

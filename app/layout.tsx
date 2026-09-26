@@ -30,6 +30,16 @@ export const metadata: Metadata = {
     title: 'Las Veraneras Pupusería',
     description: 'El sabor de nuestras pupusas, hecho con tradición salvadoreña.',
   },
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/icon.svg',
+    apple: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+  },
 };
 
 export const viewport: Viewport = {

@@ -124,7 +124,7 @@ export function Header() {
 
           <div className="pt-2 border-t border-[#EABA68]/30 flex items-center justify-between">
             <span className="text-xs text-[#53601F] font-medium">
-              🌽 Maíz y 🍚 Arroz calientitas
+              🗓️ Solo sábados • 🛵 Repartos El Sitio Cenícero
             </span>
             <button
               type="button"

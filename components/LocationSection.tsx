@@ -42,12 +42,30 @@ export function LocationSection() {
           <span className="text-[#4A2C0D] font-medium">DIRECCIÓN_DEL_NEGOCIO</span>
         </div>
 
-        <div className="flex items-start gap-2 pt-2">
-          <span className="font-bold text-[#281101] min-w-[75px] flex items-center gap-1">
-            <Clock className="w-3.5 h-3.5 text-[#53601F] inline" />
-            Horarios:
-          </span>
-          <span className="text-[#4A2C0D] font-medium">HORARIOS_DEL_NEGOCIO</span>
+        <div className="flex flex-col gap-1.5 pt-2">
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <span className="font-bold text-[#281101] min-w-[75px] flex items-center gap-1">
+              <Clock className="w-3.5 h-3.5 text-[#53601F] inline" />
+              Horarios:
+            </span>
+            <span className="text-[11px] font-bold bg-[#73802C]/15 text-[#53601F] px-2 py-0.5 rounded-full border border-[#73802C]/30">
+              Solo Sábados
+            </span>
+          </div>
+          <div className="pl-5 space-y-1 text-xs text-[#4A2C0D]">
+            <p className="flex items-center gap-1.5">
+              <span>📝</span>
+              <span>
+                <strong className="text-[#281101]">Recepción de pedidos:</strong> 6:00 AM – 7:00 PM
+              </span>
+            </p>
+            <p className="flex items-center gap-1.5">
+              <span>🛵</span>
+              <span>
+                <strong className="text-[#281101]">Repartos a domicilio:</strong> 5:00 PM – 8:00 PM
+              </span>
+            </p>
+          </div>
         </div>
 
         <div className="flex items-start gap-2 pt-2">

@@ -33,7 +33,13 @@ export function Footer() {
         </a>
       </nav>
 
-      <div className="pt-2 text-[10px] sm:text-[11px] text-[#B87519]">
+      <div className="pt-1 text-xs text-[#57391A] flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+        <span>🗓️ <strong className="text-[#281101]">Solo sábados</strong> (Pedidos: 6:00 AM – 7:00 PM)</span>
+        <span className="hidden sm:inline text-[#EABA68]">•</span>
+        <span>🛵 <strong className="text-[#281101]">Repartos:</strong> 5:00 PM – 8:00 PM en El Sitio Cenícero</span>
+      </div>
+
+      <div className="pt-1 text-[10px] sm:text-[11px] text-[#B87519]">
         © {currentYear} Las Veraneras Pupusería. Hecho con amor salvadoreño 🇸🇻.
       </div>
     </footer>
