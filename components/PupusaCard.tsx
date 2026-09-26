@@ -53,7 +53,7 @@ export function PupusaCard({ pupusa }: PupusaCardProps) {
                 <span className="text-xs bg-[#EABA68] text-[#281101] font-bold px-2 py-0.5 rounded-full border border-[#F5D18A] shadow-xs">
                   {pupusa.promoText || '3 x $1.00'}
                 </span>
-                <span className="text-[11px] text-[#57391A]">($0.40 c/u)</span>
+                <span className="text-[11px] text-[#57391A]">(${pupusa.basePrice.toFixed(2)} c/u)</span>
               </div>
             ) : (
               <span className="font-artesanal text-base font-bold text-[#281101]">

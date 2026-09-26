@@ -3,7 +3,7 @@
 import React from 'react';
 import { useCart } from '@/context/CartContext';
 import { MapPin, Clock, Phone, Navigation, Zap } from 'lucide-react';
-import { WHATSAPP_PLACEHOLDER } from '@/data/menu';
+import { WHATSAPP_DISPLAY_PHONE, WHATSAPP_PHONE_NUMBER } from '@/data/menu';
 
 export function LocationSection() {
   const { openCart } = useCart();
@@ -19,14 +19,22 @@ export function LocationSection() {
         </div>
         <div>
           <h3 className="font-artesanal text-base sm:text-lg font-bold text-[#281101]">
-            Visítanos y pide a domicilio
+            Pide a domicilio
           </h3>
-          <p className="text-xs text-[#57391A]">Atención cálida y ambiente familiar</p>
+          <p className="text-xs text-[#57391A]">Servicio exclusivo en la comunidad El Sitio Cenícero</p>
         </div>
       </div>
 
       <div className="space-y-2 text-xs sm:text-sm text-[#57391A] divide-y divide-[#EABA68]/20">
         <div className="flex items-start gap-2 pt-1">
+          <span className="font-bold text-[#281101] min-w-[75px] flex items-center gap-1">
+            <span className="text-xs" role="img" aria-label="Moto">🛵</span>
+            Cobertura:
+          </span>
+          <span className="text-[#4A2C0D] font-semibold">Exclusivo en comunidad El Sitio Cenícero</span>
+        </div>
+
+        <div className="flex items-start gap-2 pt-2">
           <span className="font-bold text-[#281101] min-w-[75px] flex items-center gap-1">
             <MapPin className="w-3.5 h-3.5 text-[#C7435E] inline" />
             Dirección:
@@ -44,10 +52,17 @@ export function LocationSection() {
 
         <div className="flex items-start gap-2 pt-2">
           <span className="font-bold text-[#281101] min-w-[75px] flex items-center gap-1">
-            <Phone className="w-3.5 h-3.5 text-[#B87519] inline" />
-            Teléfono:
+            <Phone className="w-3.5 h-3.5 text-[#25D366] inline" />
+            WhatsApp:
           </span>
-          <span className="text-[#4A2C0D] font-medium">{WHATSAPP_PLACEHOLDER}</span>
+          <a
+            href={`https://wa.me/${WHATSAPP_PHONE_NUMBER}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#25D366] font-bold hover:underline inline-flex items-center gap-1 transition-colors"
+          >
+            {WHATSAPP_DISPLAY_PHONE}
+          </a>
         </div>
       </div>
 

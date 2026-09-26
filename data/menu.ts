@@ -1,13 +1,15 @@
 import { CartItem, CartTotals, PupusaItem } from '@/types/pupusa';
 
-export const WHATSAPP_PLACEHOLDER = 'WHATSAPP_NUMBER';
+export const WHATSAPP_PHONE_NUMBER = '50363165227';
+export const WHATSAPP_DISPLAY_PHONE = '+503 6316 5227';
+export const WHATSAPP_PLACEHOLDER = WHATSAPP_PHONE_NUMBER;
 
 export const PUPUSA_CATALOG: PupusaItem[] = [
   {
     id: 'frijol-queso',
     name: 'Frijol con Queso',
     desc: 'La clásica salvadoreña con frijolitos molidos y queso derretido.',
-    basePrice: 0.40,
+    basePrice: 0.35,
     isPromo: true,
     promoText: '3 x $1.00',
     spots: [
@@ -103,15 +105,15 @@ export function formatPrice(amount: number): string {
 
 /**
  * Calculates subtotal for an individual cart item line.
- * For Frijol con Queso: 3 for $1.00 ($0.40 each remainder).
+ * For Frijol con Queso: 3 for $1.00 ($0.35 each remainder).
  */
 export function calculateItemSubtotal(item: CartItem): number {
   if (item.pupusaId === 'frijol-queso') {
     const promoGroups = Math.floor(item.qty / 3);
     const remainder = item.qty % 3;
-    return promoGroups * 1.0 + remainder * 0.4;
+    return Math.round((promoGroups * 1.0 + remainder * 0.35) * 100) / 100;
   }
-  return item.qty * item.basePrice;
+  return Math.round(item.qty * item.basePrice * 100) / 100;
 }
 
 /**
@@ -138,12 +140,12 @@ export function calculateCartTotals(items: CartItem[]): CartTotals {
   if (totalFrijolQty > 0) {
     const promoGroups = Math.floor(totalFrijolQty / 3);
     const remainder = totalFrijolQty % 3;
-    frijolPrice = promoGroups * 1.0 + remainder * 0.4;
-    // Each group of 3 saves 3 * 0.40 - 1.00 = $0.20
-    frijolPromoSavings = promoGroups * 0.2;
+    frijolPrice = Math.round((promoGroups * 1.0 + remainder * 0.35) * 100) / 100;
+    // Each group of 3 saves 3 * 0.35 - 1.00 = $0.05
+    frijolPromoSavings = Math.round(promoGroups * 0.05 * 100) / 100;
   }
 
-  const totalPrice = regularSum + frijolPrice;
+  const totalPrice = Math.round((regularSum + frijolPrice) * 100) / 100;
 
   return {
     totalCount,
@@ -165,20 +167,25 @@ export function calculateCartTotals(items: CartItem[]): CartTotals {
  *
  * Total: $3.50
  */
-export function generateWhatsAppOrderUrl(items: CartItem[]): string {
+export function generateWhatsAppOrderUrl(items: CartItem[], customerName?: string): string {
   if (items.length === 0) return '#';
 
   const { totalPrice } = calculateCartTotals(items);
 
-  let message = `Hola, Las Veraneras Pupusería.\n\nQuiero realizar el siguiente pedido:\n\n`;
+  const cleanName = customerName?.trim();
+  const greeting = cleanName
+    ? `Hola, Las Veraneras Pupusería.\n\nMi nombre es ${cleanName} y quiero realizar el siguiente pedido:\n\n`
+    : `Hola, Las Veraneras Pupusería.\n\nQuiero realizar el siguiente pedido:\n\n`;
+
+  let message = greeting;
 
   items.forEach((item) => {
     const subtotal = calculateItemSubtotal(item);
     message += `🫓 ${item.name} (${item.masa}) x${item.qty} — ${formatPrice(subtotal)}\n`;
   });
 
-  message += `\nTotal: ${formatPrice(totalPrice)}\n\n¿Me confirman el tiempo estimado de entrega? ¡Muchas gracias!`;
+  message += `\nTotal: ${formatPrice(totalPrice)}\n\n¿Me confirman si recibieron el pedido y el tiempo estimado de entrega? ¡Muchas gracias!`;
 
   const encoded = encodeURIComponent(message);
-  return `https://wa.me/${WHATSAPP_PLACEHOLDER}?text=${encoded}`;
+  return `https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${encoded}`;
 }
