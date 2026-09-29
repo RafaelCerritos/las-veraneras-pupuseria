@@ -86,7 +86,7 @@ export function LocationSection() {
 
       <div className="pt-2 flex flex-col sm:flex-row gap-2.5">
         <a
-          href="https://maps.google.com"
+          href="https://www.google.com/maps/place/Pupuser%C3%ADa+Las+Veraneras/@13.9661369,-89.0301259,68m/data=!3m1!1e3!4m6!3m5!1s0x8f636b006d7bdcbb:0x31ac85fdf3459c57!8m2!3d13.9661841!4d-89.029834!16s%2Fg%2F11zz0pm35q?entry=ttu&g_ep=EgoyMDI2MDkyNy4wIKXMDSoASAFQAw%3D%3D"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 py-2.5 px-4 rounded-xl bg-white border border-[#EABA68]/60 text-[#4A2C0D] text-xs font-semibold text-center hover:bg-[#F5D18A]/30 transition-colors shadow-xs flex items-center justify-center gap-1.5"
